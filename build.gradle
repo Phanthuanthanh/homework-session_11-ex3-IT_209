@@ -18,3 +18,8 @@ dependencies {
 tasks.test {
     useJUnitPlatform()
 }
+
+tasks.register("bootJar", Jar) {
+    archiveClassifier = ""
+    from(sourceSets.main.output)
+}
